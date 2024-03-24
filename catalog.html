@@ -73,7 +73,7 @@
 
 								</a>
 
-								<a href="#" class="buttonLink header__contactsSection-contactLink">
+								<a data-modal-button="clear-info" class="buttonLink header__contactsSection-contactLink">
 										Связаться с нами
 								</a>
 
@@ -94,7 +94,7 @@
 								</nav>
 
 								<div class="header__burgerMenu-footer">
-										<a href="#" class="buttonLink header__burgerMenu-footer-contactLink">
+										<a data-modal-button="clear-info" class="buttonLink header__burgerMenu-footer-contactLink">
 												Связаться с нами
 										</a>
 										<a href="mailto:cars21@info.ru" class="link header__burgerMenu-footer-emailLink">
@@ -1592,7 +1592,7 @@
 
 								</a>
 
-								<a href="#" class="buttonLink footer__contactsSection-contactLink">
+								<a data-modal-button="clear-info" class="buttonLink footer__contactsSection-contactLink">
 										Связаться с нами
 								</a>
 
@@ -1602,7 +1602,7 @@
 
 
 
-				<a href="#" class="buttonLink footer__contactsSection-contactLink--Mobile">
+				<a data-modal-button="clear-info" class="buttonLink footer__contactsSection-contactLink--Mobile">
 						Связаться с нами
 				</a>
 		</div>
@@ -1617,6 +1617,210 @@
 				</div>
 		</div>
 </footer>
+
+<!-- modals -->
+<div class="modalWrapper wrapperHidden">
+
+		<!-- clearForm -->
+		<div data-modal="clear-form" class="modalWrapper__modal clearForm hidden">
+
+				<!-- close icon -->
+				<img src="modals/img/x.svg"
+						 alt="x"
+						 class="modalWrapper__modal-closeIcon">
+
+				<!-- header -->
+				<div class="modalHeader">
+						<div class="modalHeader__title">
+								CHEVROLET IMPALA 2017
+						</div>
+
+						<div class="modalHeader__text">
+								VIN 3GCPWCED4LG207954
+						</div>
+				</div>
+
+				<!-- check list -->
+				<div class="checkList">
+						<div class="checkList__title">
+								Очистите историю автомобиля всего за 35 USD
+						</div>
+
+						<div class="checkList__title-list">
+
+								<div class="checkList__title-list-item">
+										<img src="modals/img/check-circle.svg"
+												 alt="check-circle"
+												 class="checkList__title-list-item-icon">
+
+										<div class="checkList__title-list-item-text">
+												Удаление фотографий
+										</div>
+								</div>
+
+								<div class="checkList__title-list-item">
+										<img src="modals/img/check-circle.svg"
+												 alt="check-circle"
+												 class="checkList__title-list-item-icon">
+
+										<div class="checkList__title-list-item-text">
+												Нет цены продажи
+										</div>
+								</div>
+
+								<div class="checkList__title-list-item">
+										<img src="modals/img/check-circle.svg"
+												 alt="check-circle"
+												 class="checkList__title-list-item-icon">
+
+										<div class="checkList__title-list-item-text">
+												Нет информации о повреждениях
+										</div>
+								</div>
+
+								<div class="checkList__title-list-item">
+										<img src="modals/img/check-circle.svg"
+												 alt="check-circle"
+												 class="checkList__title-list-item-icon">
+
+										<div class="checkList__title-list-item-text">
+												Удаление из Cars21
+										</div>
+								</div>
+						</div>
+				</div>
+
+				<!-- form -->
+				<form action="#" class="modalForm" name="clear-form">
+						<div class="modalForm__title">
+								Связаться со специалистом
+						</div>
+
+						<div class="modalForm__content">
+								<!-- ui/textInput -->
+								<input required
+											 name="name"
+											 type="text"
+											 class="textInput"
+											 placeholder="Ваше имя">
+
+								<input required
+											 name="email"
+											 type="text"
+											 class="textInput"
+											 placeholder="Адрес электронной почты">
+
+								<input name="tg-name"
+											 type="text"
+											 class="textInput"
+											 placeholder="Ник в Телеграм">
+
+								<textarea name="message"
+													class="textInput"
+													placeholder="Ваше сообщение"></textarea>
+
+								<button type="submit" class="buttonLink buttonLink--blue modalForm__content-submitBtn">
+										Отправить
+								</button>
+						</div>
+				</form>
+
+		</div>
+
+		<!-- clearInfo -->
+		<div data-modal="clear-info" class="modalWrapper__modal clearInfo">
+
+				<!-- close icon -->
+				<img src="modals/img/x.svg"
+						 alt="x"
+						 class="modalWrapper__modal-closeIcon">
+
+				<!-- header -->
+				<div class="modalHeader">
+						<div class="modalHeader__title">
+								CHEVROLET IMPALA 2017
+						</div>
+
+						<div class="modalHeader__text">
+								VIN 3GCPWCED4LG207954
+						</div>
+				</div>
+
+				<!-- check list -->
+				<div class="checkList">
+						<div class="checkList__title">
+								Вы можете удалить ваш автомобиль<br>
+								из нашей базы данных
+						</div>
+
+						<div class="checkList__title-list">
+
+								<div class="checkList__title-list-item">
+										<img src="modals/img/check-circle.svg"
+												 alt="check-circle"
+												 class="checkList__title-list-item-icon">
+
+										<div class="checkList__title-list-item-text">
+												Удаление фотографий
+										</div>
+								</div>
+
+								<div class="checkList__title-list-item">
+										<img src="modals/img/check-circle.svg"
+												 alt="check-circle"
+												 class="checkList__title-list-item-icon">
+
+										<div class="checkList__title-list-item-text">
+												Нет цены продажи
+										</div>
+								</div>
+
+								<div class="checkList__title-list-item">
+										<img src="modals/img/check-circle.svg"
+												 alt="check-circle"
+												 class="checkList__title-list-item-icon">
+
+										<div class="checkList__title-list-item-text">
+												Нет информации о повреждениях
+										</div>
+								</div>
+
+								<div class="checkList__title-list-item">
+										<img src="modals/img/check-circle.svg"
+												 alt="check-circle"
+												 class="checkList__title-list-item-icon">
+
+										<div class="checkList__title-list-item-text">
+												Удаление из Cars21
+										</div>
+								</div>
+						</div>
+				</div>
+
+				<!-- buttons -->
+				<div class="modalButtons">
+						<a href="#" class="buttonLink buttonLink--icon buttonLink--blue modalButtons__btn">
+								<img src="modals/img/tg.svg" alt="tg" class="modalButtons__btn-icon">
+								Связаться со специалистом
+						</a>
+						<a href="#" class="buttonLink buttonLink--icon buttonLink--blue modalButtons__btn">
+								<img src="modals/img/tg.svg" alt="tg" class="modalButtons__btn-icon">
+								Telegram Bot
+						</a>
+				</div>
+
+				<!-- footer -->
+				<div class="modalFooter">
+						<div class="modalFooter__text">
+								Также вы можете связаться с нами по электронной почте
+						</div>
+
+						<a href="mailto:info@cars21.com" class="modalFooter__link">
+								info@cars21.com
+						</a>
+				</div>
+		</div>
+</div>
 
 <!-- jQuery CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -1639,7 +1843,7 @@
 <script src="components/header/header.js"></script>
 <script src="components/footer/footer.js"></script>
 <script src="components/basicSlider/basicSlider.js"></script>
-
+<script src="modals/modalWrapper.js"></script>
 <!-- Modals -->
 
 
