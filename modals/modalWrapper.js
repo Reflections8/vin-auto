@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
   modalButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       modalWrapper.classList.remove('wrapperHidden')
-      document.body.style.overflow = 'hidden'
       hideAllModals()
       const clickedModalButton = btn.getAttribute('data-modal-button')
       const matchedModal = document.querySelector(`[data-modal=${clickedModalButton}]`)
