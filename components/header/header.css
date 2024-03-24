@@ -1,0 +1,234 @@
+.headerWrapper {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 32px 0;
+  background-color: #F3F3F5;
+  transition: all .2s ease-in-out;
+  z-index: 1000;
+  max-width: 100vw;
+}
+
+.headerWrapper--Scrolled {
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, .1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: all .2s ease-in-out;
+}
+
+.header__logoSection {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.header__logoSection-logo {
+  display: flex;
+}
+
+.header__logoSection-logo-img {
+  max-width: 216px;
+  width: 100%;
+}
+
+.header__logoSection-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header__logoSection-nav-link {
+  font-weight: 500;
+}
+
+.header__contactsSection {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header__contactsSection-emailLink {
+  font-weight: 400;
+}
+
+.header__contactsSection-tgLink {
+  display: flex;
+}
+
+.header--tabletNav {
+  display: none;
+}
+
+.header__contactsSection-burgerIcon {
+  display: none;
+}
+
+.header__burgerMenu {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .header__logoSection-nav {
+    display: none;
+  }
+
+  .buttonLink.header__contactsSection-contactLink {
+    margin-left: -8px;
+  }
+
+  .header--tabletNav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .headerWrapper {
+    padding: 24px 0;
+  }
+
+  .header {
+    margin-bottom: 32px;
+  }
+
+  .header__logoSection-logo-img {
+    max-width: 137px;
+  }
+
+  .header__contactsSection-emailLink {
+    font-size: 14px;
+  }
+
+  .buttonLink.header__contactsSection-contactLink {
+    font-size: 14px;
+  }
+
+}
+@media screen and (max-width: 991px) {
+
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 600px) {
+  .headerWrapper {
+    padding: 20px 0;
+  }
+
+  .header {
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    gap: 0;
+    transition: all .2s ease-in-out;
+  }
+
+  .header--tabletNav {
+    display: none;
+  }
+
+  .header__contactsSection {
+    gap: 24px;
+  }
+
+  .header__contactsSection-emailLink {
+    display: none;
+  }
+
+  .header__contactsSection-contactLink {
+    display: none;
+  }
+
+  .header__contactsSection-burgerIcon {
+    display: flex;
+    flex-direction: column;
+    width: 24px;
+    gap: 6px;
+  }
+
+  .header__contactsSection-burgerIcon-line {
+    width: 100%;
+    height: 2px;
+    background: #1F1A17;
+    transition: all .2s ease-in-out;
+    opacity: 1;
+    position: relative;
+    top: 0;
+  }
+
+  .header__contactsSection-burgerIcon--Active .header__contactsSection-burgerIcon-line {
+    background: #0093DD;
+  }
+
+  .header__contactsSection-burgerIcon--Active .header__contactsSection-burgerIcon-line:nth-child(1) {
+    transform: rotate(45deg);
+    top: 8px;
+  }
+  .header__contactsSection-burgerIcon--Active .header__contactsSection-burgerIcon-line:nth-child(2) {
+    opacity: 0;
+  }
+  .header__contactsSection-burgerIcon--Active .header__contactsSection-burgerIcon-line:nth-child(3) {
+    transform: rotate(-45deg);
+    top: -8px;
+  }
+
+  .header__burgerMenu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: calc(100vh - 112px);
+    justify-content: center;
+    transition: all .1s ease-in-out;
+  }
+
+  .header__burgerMenu--Hidden {
+    height: 0;
+    min-height: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .header__burgerMenu--Hidden .headerWrapper {
+    height: 80px;
+  }
+
+  .header__burgerMenu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .header__logoSection-nav-link {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .header__burgerMenu-footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .header__burgerMenu-footer-contactLink {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .header__burgerMenu-footer-emailLink {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .header__burgerMenu-footer-img {
+    margin-bottom: -20px;
+  }
+}
+@media screen and (max-width: 450px) {
+
+}

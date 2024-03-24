@@ -1,0 +1,87 @@
+.carSliderWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.carSliderWrapper__main {
+  overflow: hidden;
+}
+
+.carSliderWrapper__main .slick-dots {
+  bottom: 20px;
+  z-index: 1;
+}
+
+.carSliderWrapper__main .slick-dots li button:before {
+  font-size: 12px;
+  opacity: 1;
+  color: white;
+}
+
+.carSliderWrapper__main .slick-dots .slick-active button:before {
+  color: #0093DD;
+}
+
+.carSliderWrapper__main-slide {
+  border-radius: 6px;
+  object-fit: cover;
+  display: flex;
+  height: 560px;
+}
+
+.carSliderWrapper__gallery-slide {
+  border-radius: 6px;
+  height: 78px;
+  object-fit: cover;
+}
+
+.carSliderWrapper .slick-slider {
+  margin: 0 -12px;
+  cursor: pointer;
+}
+.carSliderWrapper .slick-slide {
+  margin-left: 12px;
+  margin-right: 12px;
+  display: flex;
+}
+
+/* CLEAR BLOCK */
+.carSliderWrapper__clearBlock {
+  background-color: #E7E7EB;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.carSliderWrapper__clearBlock-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+
+}
+
+.carSliderWrapper__clearBlock-content-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+
+.carSliderWrapper__clearBlock-content-info-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1F1A17;
+}
+
+.carSliderWrapper__clearBlock-content-info-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #707D89;
+}
+
+.carSliderWrapper__clearBlock-button {
+  width: 70%;
+}

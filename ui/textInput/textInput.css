@@ -1,0 +1,37 @@
+.textInput {
+  border: 1px solid #D2DAE1;
+  font-family: 'Montserrat', sans-serif;
+  color: #1F1A17;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 16px;
+  outline: none;
+  background: transparent;
+  border-radius: 6px;
+}
+
+.textInput:hover {
+  border: 1px solid #707D89;
+}
+
+.textInput::placeholder {
+  color: #707D89;
+}
+
+@media screen and (max-width: 1200px) {
+  .textInput {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 991px) {
+
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 576px) {
+
+}
+@media screen and (max-width: 450px) {
+
+}

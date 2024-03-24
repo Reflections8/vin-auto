@@ -1,0 +1,23 @@
+.page--Catalog {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* */
+
+.page--Car {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.page--Car main {
+  max-width: 746px;
+  width: 100%;
+}
+
+.carInfo aside {
+  max-width: 526px;
+  width: 100%;
+}

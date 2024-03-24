@@ -1,0 +1,170 @@
+@import "./fonts.css";
+@import "../../components/header/header.css";
+@import "../../components/footer/footer.css";
+@import "../../components/intro/intro.css";
+@import "../../components/tags/tags.css";
+@import "../../components/text/text.css";
+@import "../../components/card/card.css";
+@import "../../components/basicSlider/basicSlider.css";
+@import "../../components/filter/filter.css";
+@import "../../components/catalog/catalog.css";
+@import "../../components/dropdown/dropdown.css";
+@import "../../components/carSlider/carSlider.css";
+@import "../../components/carInfo/carInfo.css";
+
+/* UI */
+@import "../../ui/section/section.css";
+@import "../../ui/textInput/textInput.css";
+@import "../../ui/breadcrumbs/breadcrumbs.css";
+@import "../../ui/pageTitle/pageTitle.css";
+@import "../../ui/page/page.css";
+@import "../../ui/pagination/pagination.css";
+
+/* MODALS */
+@import "../../modals/modalWrapper.css";
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #1F1A17;
+  background-color: #F3F3F5;
+}
+
+button {
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.container {
+  max-width: 1336px;
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.link {
+  color: #1F1A17;
+  transition: all .2s ease-in-out;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #0093DD;
+}
+
+.link:active {
+  color: #0079B6;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.buttonLink {
+  background-color: #1F1A17;
+  color: white;
+  transition: all .2s ease-in-out;
+  text-decoration: none;
+  padding: 12px 26px;
+  border-radius: 80px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.buttonLink--blue {
+  background-color: #0093DD;
+}
+
+.buttonLink.buttonLink--blue:hover {
+  background-color: #0086CA;
+}
+
+.buttonLink.buttonLink:active {
+  background-color: #0079B6;
+}
+
+.buttonLink--transparent {
+  background-color: transparent;
+  border: 1px solid #D2DAE1;
+  color: #1F1A17;
+}
+
+.buttonLink.buttonLink--transparent:hover {
+  background-color: transparent;
+  border-color: #0093DD;
+}
+
+.buttonLink.buttonLink--transparent:active {
+  background-color: transparent;
+  border-color: #0079B6;
+}
+
+.buttonLink--square {
+  border-radius: 6px;
+}
+
+.buttonLink--circle {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonLink--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.buttonLink:hover {
+  background-color: #0093DD;
+}
+
+.buttonLink:active {
+  background-color: #0079B6;
+}
+
+.tgSvg__circle {
+  transition: all .2s ease-in-out;
+}
+
+.tgSvg:hover .tgSvg__circle {
+  fill: #0093DD;
+}
+
+.tgSvg:active .tgSvg__circle {
+  fill: #0079B6;
+}
+
+[data-modal-button] {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .buttonLink {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .container {
+    padding: 0 16px;
+  }
+}

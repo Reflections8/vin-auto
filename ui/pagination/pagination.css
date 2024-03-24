@@ -1,0 +1,36 @@
+.catalog__pagination {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  justify-content: center;
+}
+
+.buttonLink.catalog__pagination-btn {
+  max-width: 44px;
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.buttonLink.catalog__pagination-btn--Dots {
+  border: none;
+}
+
+.buttonLink.catalog__pagination-btn--Current {
+  background-color: #0093DD;
+  border-color: #0093DD;
+  color: white;
+}
+
+.buttonLink.catalog__pagination-btn--Current:hover {
+  background-color: #0093DD !important;
+}
+
+.buttonLink.catalog__pagination-btn--Current:active {
+  background-color: #0093DD !important;
+  border-color: #0093DD !important;
+}

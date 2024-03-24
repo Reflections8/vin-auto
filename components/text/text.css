@@ -1,0 +1,39 @@
+.text--VIN {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.text--VIN__item {
+  max-width: 306px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.text--Details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 856px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .text--VIN__item {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .text--VIN {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .text--VIN {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12px;
+  }
+}

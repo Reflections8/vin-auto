@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+		<!-- Encoding -->
+		<meta charset="UTF-8">
+
+		<!-- Language -->
+		<meta http-equiv="content-language" content="ru"/>
+
+		<!-- Author -->
+		<meta name="author" content="Ruslan Feduleyev">
+
+		<!-- Viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Title/Description -->
+		<title>Cars 21</title>
+		<meta name="description" content="Проверка авто по ВИН номеру"/>
+
+		<!-- SlickSlider CDN -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+					integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+					crossorigin="anonymous" referrerpolicy="no-referrer"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+					integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+					crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+		<!-- normalize.css -->
+		<link rel="stylesheet" href="assets/css/normalize.css">
+
+		<!-- Global CSS file -->
+		<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+<!-- components/header -->
+<header class="headerWrapper">
+		<div class="container">
+				<div class="header">
+						<div class="header__logoSection">
+								<a href="#" class="header__logoSection-logo">
+										<img src="assets/images/logo.svg"
+												 alt="logo"
+												 class="header__logoSection-logo-img">
+								</a>
+
+								<nav class="header__logoSection-nav">
+										<a href="index.html" class="link header__logoSection-nav-link">Главная</a>
+										<a href="catalog.html" class="link header__logoSection-nav-link">Каталог авто</a>
+										<a href="#" class="link header__logoSection-nav-link">Удалить вин</a>
+								</nav>
+						</div>
+
+						<div class="header__contactsSection">
+								<a href="mailto:cars21@info.ru" class="link header__contactsSection-emailLink">
+										cars21@info.ru
+								</a>
+
+								<a href="#" class="header__contactsSection-tgLink">
+										<svg class="tgSvg header__contactsSection-tgLink-svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle class="tgSvg__circle" cx="20" cy="20" r="20" fill="#1F1A17"/>
+												<path d="M12.9459 19.1157C12.9459 19.1157 19.7696 16.1051 22.1362 15.045C23.0434 14.621 26.1199 13.2641 26.1199 13.2641C26.1199 13.2641 27.5399 12.6705 27.4216 14.1122C27.3821 14.7058 27.0666 16.7835 26.751 19.0309C26.2777 22.2111 25.7649 25.688 25.7649 25.688C25.7649 25.688 25.6861 26.6633 25.0155 26.8329C24.345 27.0025 23.2406 26.2393 23.0434 26.0697C22.8856 25.9425 20.0851 24.0344 19.0596 23.1015C18.7835 22.8471 18.468 22.3383 19.099 21.7446C20.519 20.3454 22.215 18.6069 23.2406 17.5044C23.7139 16.9956 24.1872 15.8083 22.215 17.25C19.4146 19.3277 16.6536 21.2782 16.6536 21.2782C16.6536 21.2782 16.0225 21.7022 14.8392 21.3206C13.6558 20.939 12.2753 20.4302 12.2753 20.4302C12.2753 20.4302 11.3287 19.7941 12.9459 19.1157Z" fill="white"/>
+												<circle cx="34" cy="6" r="5" fill="url(#paint0_linear_63_200)" stroke="#F3F3F5" stroke-width="2"/>
+												<defs>
+														<linearGradient id="paint0_linear_63_200" x1="38" y1="10.6667" x2="30" y2="1.33333" gradientUnits="userSpaceOnUse">
+																<stop stop-color="#7DBF19"/>
+																<stop offset="1" stop-color="#A1D027"/>
+														</linearGradient>
+												</defs>
+										</svg>
+
+								</a>
+
+								<a data-modal-button="clear-info" class="buttonLink header__contactsSection-contactLink">
+										Связаться с нами
+								</a>
+
+								<div class="header__contactsSection-burgerIcon">
+										<div class="header__contactsSection-burgerIcon-line"></div>
+										<div class="header__contactsSection-burgerIcon-line"></div>
+										<div class="header__contactsSection-burgerIcon-line"></div>
+								</div>
+
+						</div>
+
+						<!-- Burger menu <= 600px -->
+						<div class="header__burgerMenu header__burgerMenu--Hidden">
+								<nav class="header__burgerMenu-nav">
+										<a href="#" class="link header__logoSection-nav-link">Главная</a>
+										<a href="#" class="link header__logoSection-nav-link">Каталог авто</a>
+										<a href="#" class="link header__logoSection-nav-link">Удалить вин</a>
+								</nav>
+
+								<div class="header__burgerMenu-footer">
+										<a data-modal-button="clear-info" href="#" class="buttonLink header__burgerMenu-footer-contactLink">
+												Связаться с нами
+										</a>
+										<a href="mailto:cars21@info.ru" class="link header__burgerMenu-footer-emailLink">
+												cars21@info.ru
+										</a>
+										<img src="components/header/img/vehicle-burger.png"
+												 alt="vehicle"
+												 class="header__burgerMenu-footer-img">
+								</div>
+
+						</div>
+
+				</div>
+
+				<nav class="header--tabletNav">
+						<a href="#" class="link header__logoSection-nav-link">Главная</a>
+						<a href="#" class="link header__logoSection-nav-link">Каталог авто</a>
+						<a href="#" class="link header__logoSection-nav-link">Удалить вин</a>
+				</nav>
+		</div>
+</header>
+
+<!-- ui/breadcrumbs -->
+<div class="breadcrumbsSection">
+		<div class="container">
+				<div class="breadcrumbs">
+						<a href="index.html" class="breadcrumbs__link">Главная</a>
+						<a href="catalog.html" class="breadcrumbs__link">Каталог авто</a>
+						<a href="#" class="breadcrumbs__link">CHEVROLET ALL Models 2020 - 3GCPWCED4LG207954</a>
+				</div>
+		</div>
+</div>
+
+<!-- ui/pageTitle -->
+<!--<div class="pageTitleSection">-->
+<!--		<div class="container">-->
+<!--				<h1 class="pageTitle">-->
+<!--						Каталог авто-->
+<!--				</h1>-->
+<!--		</div>-->
+<!--</div>-->
+
+<div class="pageWrapper">
+		<div class="container">
+				<div class="page page--Car">
+
+						<!-- components/carSlider -->
+						<main class="main carSliderWrapper">
+
+								<!-- main slider -->
+								<div class="carSliderWrapper__main">
+
+										<!-- slide -->
+										<img src="components/carSlider/img/main/1.jpg"
+												 alt="main"
+												 class="carSliderWrapper__main-slide">
+
+										<!-- slide -->
+										<img src="components/carSlider/img/main/2.jpg"
+												 alt="main"
+												 class="carSliderWrapper__main-slide">
+
+										<!-- slide -->
+										<img src="components/carSlider/img/main/3.jpg"
+												 alt="main"
+												 class="carSliderWrapper__main-slide">
+
+										<!-- slide -->
+										<img src="components/carSlider/img/main/1.jpg"
+												 alt="main"
+												 class="carSliderWrapper__main-slide">
+
+										<!-- slide -->
+										<img src="components/carSlider/img/main/2.jpg"
+												 alt="main"
+												 class="carSliderWrapper__main-slide">
+
+										<!-- slide -->
+										<img src="components/carSlider/img/main/3.jpg"
+												 alt="main"
+												 class="carSliderWrapper__main-slide">
+
+										<!-- slide -->
+										<img src="components/carSlider/img/main/1.jpg"
+												 alt="main"
+												 class="carSliderWrapper__main-slide">
+
+										<!-- slide -->
+										<img src="components/carSlider/img/main/2.jpg"
+												 alt="main"
+												 class="carSliderWrapper__main-slide">
+								</div>
+
+								<!-- gallery slider -->
+								<div class="carSliderWrapper__gallery">
+										<!-- slide -->
+										<img src="components/carSlider/img/gallery/1.jpg"
+												 alt="main"
+												 class="carSliderWrapper__gallery-slide">
+
+										<!-- slide -->
+										<img src="components/carSlider/img/gallery/2.jpg"
+												 alt="main"
+												 class="carSliderWrapper__gallery-slide">
+
+										<!-- slide -->
+										<img src="components/carSlider/img/gallery/3.jpg"
+												 alt="main"
+												 class="carSliderWrapper__gallery-slide">
+
+										<!-- slide -->
+										<img src="components/carSlider/img/gallery/4.jpg"
+												 alt="main"
+												 class="carSliderWrapper__gallery-slide">
+
+										<!-- slide -->
+										<img src="components/carSlider/img/gallery/5.jpg"
+												 alt="main"
+												 class="carSliderWrapper__gallery-slide">
+
+										<!-- slide -->
+										<img src="components/carSlider/img/gallery/1.jpg"
+												 alt="main"
+												 class="carSliderWrapper__gallery-slide">
+
+										<!-- slide -->
+										<img src="components/carSlider/img/gallery/1.jpg"
+												 alt="main"
+												 class="carSliderWrapper__gallery-slide">
+
+										<!-- slide -->
+										<img src="components/carSlider/img/gallery/1.jpg"
+												 alt="main"
+												 class="carSliderWrapper__gallery-slide">
+								</div>
+
+								<!-- clearBlock -->
+								<div class="carSliderWrapper__clearBlock">
+
+										<div class="carSliderWrapper__clearBlock-content">
+												<img src="components/carSlider/img/bell.svg"
+														 alt="bell"
+														 class="carSliderWrapper__clearBlock-content-icon">
+
+												<div class="carSliderWrapper__clearBlock-content-info">
+														<div class="carSliderWrapper__clearBlock-content-info-title">
+																Что-то неверно?
+														</div>
+														<div class="carSliderWrapper__clearBlock-content-info-text">
+																Мы предлагаем возможность удаления аукционов из архива.
+														</div>
+												</div>
+										</div>
+
+										<button data-modal-button="clear-form" class="buttonLink buttonLink--square carSliderWrapper__clearBlock-button">
+												Очистить историю автомобиля
+										</button>
+								</div>
+						</main>
+
+						<!-- components/carInfo -->
+						<aside class="aside carInfo">
+
+								<!-- block -->
+								<div class="carInfo__block">
+										<h1 class="carInfo__h1">
+												CHEVROLET IMPALA
+										</h1>
+										<div class="carInfo__year">
+												2017
+										</div>
+								</div>
+
+								<!-- block -->
+								<div class="carInfo__block">
+										<h2 class="carInfo__title">
+												Информация
+										</h2>
+
+										<!-- list -->
+										<ul class="carInfo__list">
+												<!-- row -->
+												<li class="carInfo__list-row">
+														<div class="carInfo__list-row-key">VIN</div>
+														<div class="carInfo__list-row-line"></div>
+														<div class="carInfo__list-row-value">3GCPWCED4LG207954</div>
+												</li>
+
+												<!-- row -->
+												<li class="carInfo__list-row">
+														<div class="carInfo__list-row-key">Цвет</div>
+														<div class="carInfo__list-row-line"></div>
+														<div class="carInfo__list-row-value">WHITE</div>
+												</li>
+
+												<!-- row -->
+												<li class="carInfo__list-row">
+														<div class="carInfo__list-row-key">Серия</div>
+														<div class="carInfo__list-row-line"></div>
+														<div class="carInfo__list-row-value">LS</div>
+												</li>
+										</ul>
+								</div>
+
+								<!-- block -->
+								<div class="carInfo__block">
+										<h2 class="carInfo__title">
+												Детали автомобиля
+										</h2>
+
+										<!-- list -->
+										<ul class="carInfo__list">
+												<!-- row -->
+												<li class="carInfo__list-row">
+														<div class="carInfo__list-row-key">Трансмиссия</div>
+														<div class="carInfo__list-row-line"></div>
+														<div class="carInfo__list-row-value">AUTOMATIC</div>
+												</li>
+
+												<!-- row -->
+												<li class="carInfo__list-row">
+														<div class="carInfo__list-row-key">Привод</div>
+														<div class="carInfo__list-row-line"></div>
+														<div class="carInfo__list-row-value">Front-wheel Drive</div>
+												</li>
+
+												<!-- row -->
+												<li class="carInfo__list-row">
+														<div class="carInfo__list-row-key">Топливо</div>
+														<div class="carInfo__list-row-line"></div>
+														<div class="carInfo__list-row-value">GAS</div>
+												</li>
+										</ul>
+								</div>
+
+								<!-- block -->
+								<div class="carInfo__block">
+										<h2 class="carInfo__title">
+												Состояние автомобиля
+										</h2>
+
+										<!-- list -->
+										<ul class="carInfo__list">
+												<!-- row -->
+												<li class="carInfo__list-row">
+														<div class="carInfo__list-row-key">Показания одометра</div>
+														<div class="carInfo__list-row-line"></div>
+														<div class="carInfo__list-row-value">24939</div>
+												</li>
+
+												<!-- row -->
+												<li class="carInfo__list-row">
+														<div class="carInfo__list-row-key">Основной ущерб</div>
+														<div class="carInfo__list-row-line"></div>
+														<div class="carInfo__list-row-value">SIDE</div>
+												</li>
+										</ul>
+								</div>
+
+								<!-- block -->
+								<div class="carInfo__block">
+										<h2 class="carInfo__title">
+												Деталиа аукциона
+										</h2>
+
+										<!-- list -->
+										<ul class="carInfo__list">
+												<!-- row -->
+												<li class="carInfo__list-row">
+														<div class="carInfo__list-row-key">Местоположение</div>
+														<div class="carInfo__list-row-line"></div>
+														<div class="carInfo__list-row-value">NY - ALBANY</div>
+												</li>
+
+												<!-- row -->
+												<li class="carInfo__list-row">
+														<div class="carInfo__list-row-key">Аукцион</div>
+														<div class="carInfo__list-row-line"></div>
+														<div class="carInfo__list-row-value">COPART</div>
+												</li>
+
+												<!-- row -->
+												<li class="carInfo__list-row">
+														<div class="carInfo__list-row-key">Дата продажи</div>
+														<div class="carInfo__list-row-line"></div>
+														<div class="carInfo__list-row-value">14.02.2024</div>
+												</li>
+										</ul>
+								</div>
+
+								<!-- price -->
+								<div class="carInfo__block carInfo__price">
+										$7,300
+								</div>
+
+						</aside>
+
+				</div>
+
+				<!-- components/basicSlider -->
+				<section class="section basicSliderSection">
+						<div class="container">
+
+								<h2 class="section__title">
+										Похожие аукционы
+								</h2>
+
+								<div class="basicSliderWrapper">
+										<!-- prev arrow -->
+										<button class="buttonLink buttonLink--circle basicSlider__arrow basicSlider__arrow--prev">
+												<img src="components/basicSlider/img/chevron-left.svg"
+														 alt="arrow-left">
+										</button>
+
+										<div class="basicSlider" data-slider-name="recent-lots">
+												<!-- components/card -->
+												<a href="#" class="card basicSlider__card">
+
+														<!-- img -->
+														<img src="components/card/img/1.jpg"
+																 alt="car1"
+																 class="card__img">
+
+														<!-- content -->
+														<span class="card__content">
+
+												<!-- top -->
+												<span class="card__content-top">
+														<span class="card__content-top-title">
+																CHEVROLET ALL Models 2020
+														</span>
+														<span class="card__content-top-vin">
+																VIN: 3GCPWCED4LG207954
+														</span>
+												</span>
+
+																<!-- bottom -->
+												<span class="card__content-bottom">
+
+														<!-- row -->
+														<span class="card__content-bottom-row">
+
+																<!-- key -->
+																<span class="card__content-bottom-row-key">
+																		<img src="components/card/img/calendar.svg"
+																				 alt="calendar"
+																				 class="card__content-bottom-row-key-icon">
+																		<span class="card__content-bottom-row-key-name">
+																				Дата торгов
+																		</span>
+																</span>
+
+																<!-- value -->
+																<span class="card__content-bottom-row-value">
+																		06.03.2024
+																</span>
+														</span>
+
+														<!-- row -->
+														<span class="card__content-bottom-row">
+
+																<!-- key -->
+																<span class="card__content-bottom-row-key">
+																		<img src="components/card/img/hash-02.svg"
+																				 alt="hash"
+																				 class="card__content-bottom-row-key-icon">
+																		<span class="card__content-bottom-row-key-name">
+																				Номер лота
+																		</span>
+																</span>
+
+																<!-- value -->
+																<span class="card__content-bottom-row-value">
+																		45883324
+																</span>
+														</span>
+												</span>
+										</span>
+												</a>
+
+												<!-- components/card -->
+												<a href="#" class="card basicSlider__card">
+
+														<!-- img -->
+														<img src="components/card/img/2.jpg"
+																 alt="car1"
+																 class="card__img">
+
+														<!-- content -->
+														<span class="card__content">
+
+												<!-- top -->
+												<span class="card__content-top">
+														<span class="card__content-top-title">
+																CHEVROLET ALL Models 2020
+														</span>
+														<span class="card__content-top-vin">
+																VIN: 3GCPWCED4LG207954
+														</span>
+												</span>
+
+																<!-- bottom -->
+												<span class="card__content-bottom">
+
+														<!-- row -->
+														<span class="card__content-bottom-row">
+
+																<!-- key -->
+																<span class="card__content-bottom-row-key">
+																		<img src="components/card/img/calendar.svg"
+																				 alt="calendar"
+																				 class="card__content-bottom-row-key-icon">
+																		<span class="card__content-bottom-row-key-name">
+																				Дата торгов
+																		</span>
+																</span>
+
+																<!-- value -->
+																<span class="card__content-bottom-row-value">
+																		06.03.2024
+																</span>
+														</span>
+
+														<!-- row -->
+														<span class="card__content-bottom-row">
+
+																<!-- key -->
+																<span class="card__content-bottom-row-key">
+																		<img src="components/card/img/hash-02.svg"
+																				 alt="hash"
+																				 class="card__content-bottom-row-key-icon">
+																		<span class="card__content-bottom-row-key-name">
+																				Номер лота
+																		</span>
+																</span>
+
+																<!-- value -->
+																<span class="card__content-bottom-row-value">
+																		45883324
+																</span>
+														</span>
+												</span>
+										</span>
+												</a>
+
+												<!-- components/card -->
+												<a href="#" class="card basicSlider__card">
+
+														<!-- img -->
+														<img src="components/card/img/3.jpg"
+																 alt="car1"
+																 class="card__img">
+
+														<!-- content -->
+														<span class="card__content">
+
+												<!-- top -->
+												<span class="card__content-top">
+														<span class="card__content-top-title">
+																CHEVROLET ALL Models 2020
+														</span>
+														<span class="card__content-top-vin">
+																VIN: 3GCPWCED4LG207954
+														</span>
+												</span>
+
+																<!-- bottom -->
+												<span class="card__content-bottom">
+
+														<!-- row -->
+														<span class="card__content-bottom-row">
+
+																<!-- key -->
+																<span class="card__content-bottom-row-key">
+																		<img src="components/card/img/calendar.svg"
+																				 alt="calendar"
+																				 class="card__content-bottom-row-key-icon">
+																		<span class="card__content-bottom-row-key-name">
+																				Дата торгов
+																		</span>
+																</span>
+
+																<!-- value -->
+																<span class="card__content-bottom-row-value">
+																		06.03.2024
+																</span>
+														</span>
+
+														<!-- row -->
+														<span class="card__content-bottom-row">
+
+																<!-- key -->
+																<span class="card__content-bottom-row-key">
+																		<img src="components/card/img/hash-02.svg"
+																				 alt="hash"
+																				 class="card__content-bottom-row-key-icon">
+																		<span class="card__content-bottom-row-key-name">
+																				Номер лота
+																		</span>
+																</span>
+
+																<!-- value -->
+																<span class="card__content-bottom-row-value">
+																		45883324
+																</span>
+														</span>
+												</span>
+										</span>
+												</a>
+
+												<!-- components/card -->
+												<a href="#" class="card basicSlider__card">
+
+														<!-- img -->
+														<img src="components/card/img/4.jpg"
+																 alt="car1"
+																 class="card__img">
+
+														<!-- content -->
+														<span class="card__content">
+
+												<!-- top -->
+												<span class="card__content-top">
+														<span class="card__content-top-title">
+																CHEVROLET ALL Models 2020
+														</span>
+														<span class="card__content-top-vin">
+																VIN: 3GCPWCED4LG207954
+														</span>
+												</span>
+
+																<!-- bottom -->
+												<span class="card__content-bottom">
+
+														<!-- row -->
+														<span class="card__content-bottom-row">
+
+																<!-- key -->
+																<span class="card__content-bottom-row-key">
+																		<img src="components/card/img/calendar.svg"
+																				 alt="calendar"
+																				 class="card__content-bottom-row-key-icon">
+																		<span class="card__content-bottom-row-key-name">
+																				Дата торгов
+																		</span>
+																</span>
+
+																<!-- value -->
+																<span class="card__content-bottom-row-value">
+																		06.03.2024
+																</span>
+														</span>
+
+														<!-- row -->
+														<span class="card__content-bottom-row">
+
+																<!-- key -->
+																<span class="card__content-bottom-row-key">
+																		<img src="components/card/img/hash-02.svg"
+																				 alt="hash"
+																				 class="card__content-bottom-row-key-icon">
+																		<span class="card__content-bottom-row-key-name">
+																				Номер лота
+																		</span>
+																</span>
+
+																<!-- value -->
+																<span class="card__content-bottom-row-value">
+																		45883324
+																</span>
+														</span>
+												</span>
+										</span>
+												</a>
+
+												<!-- components/card -->
+												<a href="#" class="card basicSlider__card">
+
+														<!-- img -->
+														<img src="components/card/img/1.jpg"
+																 alt="car1"
+																 class="card__img">
+
+														<!-- content -->
+														<span class="card__content">
+
+												<!-- top -->
+												<span class="card__content-top">
+														<span class="card__content-top-title">
+																CHEVROLET ALL Models 2020
+														</span>
+														<span class="card__content-top-vin">
+																VIN: 3GCPWCED4LG207954
+														</span>
+												</span>
+
+																<!-- bottom -->
+												<span class="card__content-bottom">
+
+														<!-- row -->
+														<span class="card__content-bottom-row">
+
+																<!-- key -->
+																<span class="card__content-bottom-row-key">
+																		<img src="components/card/img/calendar.svg"
+																				 alt="calendar"
+																				 class="card__content-bottom-row-key-icon">
+																		<span class="card__content-bottom-row-key-name">
+																				Дата торгов
+																		</span>
+																</span>
+
+																<!-- value -->
+																<span class="card__content-bottom-row-value">
+																		06.03.2024
+																</span>
+														</span>
+
+														<!-- row -->
+														<span class="card__content-bottom-row">
+
+																<!-- key -->
+																<span class="card__content-bottom-row-key">
+																		<img src="components/card/img/hash-02.svg"
+																				 alt="hash"
+																				 class="card__content-bottom-row-key-icon">
+																		<span class="card__content-bottom-row-key-name">
+																				Номер лота
+																		</span>
+																</span>
+
+																<!-- value -->
+																<span class="card__content-bottom-row-value">
+																		45883324
+																</span>
+														</span>
+												</span>
+										</span>
+												</a>
+
+												<!-- components/card -->
+												<a href="#" class="card basicSlider__card">
+
+														<!-- img -->
+														<img src="components/card/img/2.jpg"
+																 alt="car1"
+																 class="card__img">
+
+														<!-- content -->
+														<span class="card__content">
+
+												<!-- top -->
+												<span class="card__content-top">
+														<span class="card__content-top-title">
+																CHEVROLET ALL Models 2020
+														</span>
+														<span class="card__content-top-vin">
+																VIN: 3GCPWCED4LG207954
+														</span>
+												</span>
+
+																<!-- bottom -->
+												<span class="card__content-bottom">
+
+														<!-- row -->
+														<span class="card__content-bottom-row">
+
+																<!-- key -->
+																<span class="card__content-bottom-row-key">
+																		<img src="components/card/img/calendar.svg"
+																				 alt="calendar"
+																				 class="card__content-bottom-row-key-icon">
+																		<span class="card__content-bottom-row-key-name">
+																				Дата торгов
+																		</span>
+																</span>
+
+																<!-- value -->
+																<span class="card__content-bottom-row-value">
+																		06.03.2024
+																</span>
+														</span>
+
+														<!-- row -->
+														<span class="card__content-bottom-row">
+
+																<!-- key -->
+																<span class="card__content-bottom-row-key">
+																		<img src="components/card/img/hash-02.svg"
+																				 alt="hash"
+																				 class="card__content-bottom-row-key-icon">
+																		<span class="card__content-bottom-row-key-name">
+																				Номер лота
+																		</span>
+																</span>
+
+																<!-- value -->
+																<span class="card__content-bottom-row-value">
+																		45883324
+																</span>
+														</span>
+												</span>
+										</span>
+												</a>
+
+												<!-- components/card -->
+												<a href="#" class="card basicSlider__card">
+
+														<!-- img -->
+														<img src="components/card/img/3.jpg"
+																 alt="car1"
+																 class="card__img">
+
+														<!-- content -->
+														<span class="card__content">
+
+												<!-- top -->
+												<span class="card__content-top">
+														<span class="card__content-top-title">
+																CHEVROLET ALL Models 2020
+														</span>
+														<span class="card__content-top-vin">
+																VIN: 3GCPWCED4LG207954
+														</span>
+												</span>
+
+																<!-- bottom -->
+												<span class="card__content-bottom">
+
+														<!-- row -->
+														<span class="card__content-bottom-row">
+
+																<!-- key -->
+																<span class="card__content-bottom-row-key">
+																		<img src="components/card/img/calendar.svg"
+																				 alt="calendar"
+																				 class="card__content-bottom-row-key-icon">
+																		<span class="card__content-bottom-row-key-name">
+																				Дата торгов
+																		</span>
+																</span>
+
+																<!-- value -->
+																<span class="card__content-bottom-row-value">
+																		06.03.2024
+																</span>
+														</span>
+
+														<!-- row -->
+														<span class="card__content-bottom-row">
+
+																<!-- key -->
+																<span class="card__content-bottom-row-key">
+																		<img src="components/card/img/hash-02.svg"
+																				 alt="hash"
+																				 class="card__content-bottom-row-key-icon">
+																		<span class="card__content-bottom-row-key-name">
+																				Номер лота
+																		</span>
+																</span>
+
+																<!-- value -->
+																<span class="card__content-bottom-row-value">
+																		45883324
+																</span>
+														</span>
+												</span>
+										</span>
+												</a>
+
+												<!-- components/card -->
+												<a href="#" class="card basicSlider__card">
+
+														<!-- img -->
+														<img src="components/card/img/4.jpg"
+																 alt="car1"
+																 class="card__img">
+
+														<!-- content -->
+														<span class="card__content">
+
+												<!-- top -->
+												<span class="card__content-top">
+														<span class="card__content-top-title">
+																CHEVROLET ALL Models 2020
+														</span>
+														<span class="card__content-top-vin">
+																VIN: 3GCPWCED4LG207954
+														</span>
+												</span>
+
+																<!-- bottom -->
+												<span class="card__content-bottom">
+
+														<!-- row -->
+														<span class="card__content-bottom-row">
+
+																<!-- key -->
+																<span class="card__content-bottom-row-key">
+																		<img src="components/card/img/calendar.svg"
+																				 alt="calendar"
+																				 class="card__content-bottom-row-key-icon">
+																		<span class="card__content-bottom-row-key-name">
+																				Дата торгов
+																		</span>
+																</span>
+
+																<!-- value -->
+																<span class="card__content-bottom-row-value">
+																		06.03.2024
+																</span>
+														</span>
+
+														<!-- row -->
+														<span class="card__content-bottom-row">
+
+																<!-- key -->
+																<span class="card__content-bottom-row-key">
+																		<img src="components/card/img/hash-02.svg"
+																				 alt="hash"
+																				 class="card__content-bottom-row-key-icon">
+																		<span class="card__content-bottom-row-key-name">
+																				Номер лота
+																		</span>
+																</span>
+
+																<!-- value -->
+																<span class="card__content-bottom-row-value">
+																		45883324
+																</span>
+														</span>
+												</span>
+										</span>
+												</a>
+										</div>
+
+										<!-- next arrow -->
+										<button class="buttonLink buttonLink--circle basicSlider__arrow basicSlider__arrow--next">
+												<img src="components/basicSlider/img/chevron-right.svg"
+														 alt="arrow-right">
+										</button>
+								</div>
+
+						</div>
+				</section>
+
+				<!-- components/text -->
+				<section class="section textSection">
+						<div class="container">
+								<h2 class="section__title">
+										Аукцион автомобиля с номером
+										VIN 3GCPWCED4LG207954
+								</h2>
+
+								<div class="text text--Details">
+										<div class="text--Details__item">
+												CHEVROLET IMPALA, выпущенный в 2017 году цвет whiteс VIN-номером 3GCPWCED4LG207954. Автомобиль принадлежит к серии LS. Автомобиль оснащен коробкой передач типа automatic и приводом front-wheel drive. Двигатель работает на gas топливе.
+										</div>
+
+										<div class="text--Details__item">
+												Спидометр показывает 24939. У автомобиля есть повреждения, описанные как SIDE.
+										</div>
+
+										<div class="text--Details__item">
+												Товар выставлен на аукционе COPART под номером 40022194. Дата продажи - 14.02.2024. Аукцион прошел в NY - ALBANY. Цена продажи составила $7,300.
+										</div>
+
+										<div class="text--Details__item">
+												По этой ссылке можно найти аналогичные автомобили марки CHEVROLET.
+										</div>
+								</div>
+						</div>
+				</section>
+
+				<!-- components/tags -->
+				<section class="section tagsSection">
+						<div class="container">
+								<h2 class="section__title">
+										Популярные модели Chevrolet
+								</h2>
+								<div class="tags">
+										<a href="#" class="buttonLink tags__link">Toyota</a>
+										<a href="#" class="buttonLink tags__link">Volkswagen</a>
+										<a href="#" class="buttonLink tags__link">Ford</a>
+										<a href="#" class="buttonLink tags__link">Honda</a>
+										<a href="#" class="buttonLink tags__link">Nissan</a>
+										<a href="#" class="buttonLink tags__link">Hyundai</a>
+										<a href="#" class="buttonLink tags__link">Chevrolet</a>
+										<a href="#" class="buttonLink tags__link">KIA</a>
+										<a href="#" class="buttonLink tags__link">Renault</a>
+										<a href="#" class="buttonLink tags__link">Mercedes</a>
+										<a href="#" class="buttonLink tags__link">Peugeot</a>
+										<a href="#" class="buttonLink tags__link">BMW</a>
+										<a href="#" class="buttonLink tags__link">Audi</a>
+										<a href="#" class="buttonLink tags__link">Mazda</a>
+										<a href="#" class="buttonLink tags__link">Suzuki</a>
+										<a href="#" class="buttonLink tags__link">Jeep</a>
+										<a href="#" class="buttonLink tags__link">Changan</a>
+										<a href="#" class="buttonLink tags__link">Buick</a>
+										<a href="#" class="buttonLink tags__link">Skoda</a>
+										<a href="#" class="buttonLink tags__link">Opel</a>
+										<a href="#" class="buttonLink tags__link">Subaru</a>
+										<a href="#" class="buttonLink tags__link">Mistubishi</a>
+
+										<a class="buttonLink tags__link tags__link--More">Еще</a>
+								</div>
+						</div>
+				</section>
+		</div>
+</div>
+
+<footer class="footerWrapper">
+		<div class="container">
+				<div class="footer">
+						<div class="footer__logoSection">
+								<a href="#" class="footer__logoSection-logo">
+										<img src="assets/images/logo.svg"
+												 alt="logo"
+												 class="footer__logoSection-logo-img">
+								</a>
+
+								<nav class="footer__logoSection-nav">
+										<a href="#" class="link footer__logoSection-nav-link">Главная</a>
+										<a href="#" class="link footer__logoSection-nav-link">Каталог авто</a>
+										<a href="#" class="link footer__logoSection-nav-link">Удалить вин</a>
+								</nav>
+						</div>
+
+						<div class="footer__contactsSection">
+								<a href="mailto:cars21@info.ru" class="link footer__contactsSection-emailLink">
+										cars21@info.ru
+								</a>
+
+								<a href="#" class="footer__contactsSection-tgLink">
+										<svg class="tgSvg footer__contactsSection-tgLink-svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle class="tgSvg__circle" cx="20" cy="20" r="20" fill="#1F1A17"/>
+												<path d="M12.9459 19.1157C12.9459 19.1157 19.7696 16.1051 22.1362 15.045C23.0434 14.621 26.1199 13.2641 26.1199 13.2641C26.1199 13.2641 27.5399 12.6705 27.4216 14.1122C27.3821 14.7058 27.0666 16.7835 26.751 19.0309C26.2777 22.2111 25.7649 25.688 25.7649 25.688C25.7649 25.688 25.6861 26.6633 25.0155 26.8329C24.345 27.0025 23.2406 26.2393 23.0434 26.0697C22.8856 25.9425 20.0851 24.0344 19.0596 23.1015C18.7835 22.8471 18.468 22.3383 19.099 21.7446C20.519 20.3454 22.215 18.6069 23.2406 17.5044C23.7139 16.9956 24.1872 15.8083 22.215 17.25C19.4146 19.3277 16.6536 21.2782 16.6536 21.2782C16.6536 21.2782 16.0225 21.7022 14.8392 21.3206C13.6558 20.939 12.2753 20.4302 12.2753 20.4302C12.2753 20.4302 11.3287 19.7941 12.9459 19.1157Z" fill="white"/>
+												<circle cx="34" cy="6" r="5" fill="url(#paint0_linear_63_200)" stroke="#F3F3F5" stroke-width="2"/>
+												<defs>
+														<linearGradient id="paint0_linear_63_200" x1="38" y1="10.6667" x2="30" y2="1.33333" gradientUnits="userSpaceOnUse">
+																<stop stop-color="#7DBF19"/>
+																<stop offset="1" stop-color="#A1D027"/>
+														</linearGradient>
+												</defs>
+										</svg>
+
+								</a>
+
+								<a data-modal-button="clear-info" class="buttonLink footer__contactsSection-contactLink">
+										Связаться с нами
+								</a>
+
+						</div>
+
+				</div>
+
+
+
+				<a data-modal-button="clear-info" href="#" class="buttonLink footer__contactsSection-contactLink--Mobile">
+						Связаться с нами
+				</a>
+		</div>
+
+		<div class="footerLower">
+				<div class="container">
+						<div class="footerLower__content">
+								<div class="footerLower__content-copyright">
+										2024 © Cars21
+								</div>
+						</div>
+				</div>
+		</div>
+</footer>
+
+<!-- modals -->
+<div class="modalWrapper wrapperHidden">
+
+		<!-- clearForm -->
+		<div data-modal="clear-form" class="modalWrapper__modal clearForm hidden">
+
+				<!-- close icon -->
+				<img src="modals/img/x.svg"
+						 alt="x"
+						 class="modalWrapper__modal-closeIcon">
+
+				<!-- header -->
+				<div class="modalHeader">
+						<div class="modalHeader__title">
+								CHEVROLET IMPALA 2017
+						</div>
+
+						<div class="modalHeader__text">
+								VIN 3GCPWCED4LG207954
+						</div>
+				</div>
+
+				<!-- check list -->
+				<div class="checkList">
+						<div class="checkList__title">
+								Очистите историю автомобиля всего за 35 USD
+						</div>
+
+						<div class="checkList__title-list">
+
+								<div class="checkList__title-list-item">
+										<img src="modals/img/check-circle.svg"
+												 alt="check-circle"
+												 class="checkList__title-list-item-icon">
+
+										<div class="checkList__title-list-item-text">
+												Удаление фотографий
+										</div>
+								</div>
+
+								<div class="checkList__title-list-item">
+										<img src="modals/img/check-circle.svg"
+												 alt="check-circle"
+												 class="checkList__title-list-item-icon">
+
+										<div class="checkList__title-list-item-text">
+												Нет цены продажи
+										</div>
+								</div>
+
+								<div class="checkList__title-list-item">
+										<img src="modals/img/check-circle.svg"
+												 alt="check-circle"
+												 class="checkList__title-list-item-icon">
+
+										<div class="checkList__title-list-item-text">
+												Нет информации о повреждениях
+										</div>
+								</div>
+
+								<div class="checkList__title-list-item">
+										<img src="modals/img/check-circle.svg"
+												 alt="check-circle"
+												 class="checkList__title-list-item-icon">
+
+										<div class="checkList__title-list-item-text">
+												Удаление из Cars21
+										</div>
+								</div>
+						</div>
+				</div>
+
+				<!-- form -->
+				<form action="#" class="modalForm" name="clear-form">
+						<div class="modalForm__title">
+								Связаться со специалистом
+						</div>
+
+						<div class="modalForm__content">
+								<!-- ui/textInput -->
+								<input required
+											 name="name"
+											 type="text"
+											 class="textInput"
+											 placeholder="Ваше имя">
+
+								<input required
+											 name="email"
+											 type="text"
+											 class="textInput"
+											 placeholder="Адрес электронной почты">
+
+								<input name="tg-name"
+											 type="text"
+											 class="textInput"
+											 placeholder="Ник в Телеграм">
+
+								<textarea name="message"
+													class="textInput"
+													placeholder="Ваше сообщение"></textarea>
+
+								<button type="submit" class="buttonLink buttonLink--blue modalForm__content-submitBtn">
+										Отправить
+								</button>
+						</div>
+				</form>
+
+		</div>
+
+		<!-- clearInfo -->
+		<div data-modal="clear-info" class="modalWrapper__modal clearInfo">
+
+				<!-- close icon -->
+				<img src="modals/img/x.svg"
+						 alt="x"
+						 class="modalWrapper__modal-closeIcon">
+
+				<!-- header -->
+				<div class="modalHeader">
+						<div class="modalHeader__title">
+								CHEVROLET IMPALA 2017
+						</div>
+
+						<div class="modalHeader__text">
+								VIN 3GCPWCED4LG207954
+						</div>
+				</div>
+
+				<!-- check list -->
+				<div class="checkList">
+						<div class="checkList__title">
+								Вы можете удалить ваш автомобиль<br>
+								из нашей базы данных
+						</div>
+
+						<div class="checkList__title-list">
+
+								<div class="checkList__title-list-item">
+										<img src="modals/img/check-circle.svg"
+												 alt="check-circle"
+												 class="checkList__title-list-item-icon">
+
+										<div class="checkList__title-list-item-text">
+												Удаление фотографий
+										</div>
+								</div>
+
+								<div class="checkList__title-list-item">
+										<img src="modals/img/check-circle.svg"
+												 alt="check-circle"
+												 class="checkList__title-list-item-icon">
+
+										<div class="checkList__title-list-item-text">
+												Нет цены продажи
+										</div>
+								</div>
+
+								<div class="checkList__title-list-item">
+										<img src="modals/img/check-circle.svg"
+												 alt="check-circle"
+												 class="checkList__title-list-item-icon">
+
+										<div class="checkList__title-list-item-text">
+												Нет информации о повреждениях
+										</div>
+								</div>
+
+								<div class="checkList__title-list-item">
+										<img src="modals/img/check-circle.svg"
+												 alt="check-circle"
+												 class="checkList__title-list-item-icon">
+
+										<div class="checkList__title-list-item-text">
+												Удаление из Cars21
+										</div>
+								</div>
+						</div>
+				</div>
+
+				<!-- buttons -->
+				<div class="modalButtons">
+						<a href="#" class="buttonLink buttonLink--icon buttonLink--blue modalButtons__btn">
+								<img src="modals/img/tg.svg" alt="tg" class="modalButtons__btn-icon">
+								Связаться со специалистом
+						</a>
+						<a href="#" class="buttonLink buttonLink--icon buttonLink--blue modalButtons__btn">
+								<img src="modals/img/tg.svg" alt="tg" class="modalButtons__btn-icon">
+								Telegram Bot
+						</a>
+				</div>
+
+				<!-- footer -->
+				<div class="modalFooter">
+						<div class="modalFooter__text">
+								Также вы можете связаться с нами по электронной почте
+						</div>
+
+						<a href="mailto:info@cars21.com" class="modalFooter__link">
+								info@cars21.com
+						</a>
+				</div>
+		</div>
+</div>
+
+<!-- jQuery CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+				integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+				crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- SlickSlider CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+				integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+				crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"
+				integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA=="
+				crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Global script -->
+<script src="assets/js/index.js"></script>
+
+<!-- Component scripts -->
+<script src="components/dropdown/dropdown.js"></script>
+<script src="components/header/header.js"></script>
+<script src="components/footer/footer.js"></script>
+<script src="components/basicSlider/basicSlider.js"></script>
+<script src="components/carSlider/carSlider.js"></script>
+<script src="modals/modalWrapper.js"></script>
+
+<!-- Modals -->
+
+
+</body>
+</html>

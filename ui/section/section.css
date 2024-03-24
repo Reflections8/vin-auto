@@ -1,0 +1,31 @@
+.section {
+  margin: 80px auto;
+}
+
+.section__title {
+  margin-bottom: 40px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1200px) {
+  .section {
+    margin: 64px auto;
+  }
+
+  .section__title {
+    font-size: 26px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section {
+    margin: 40px auto;
+  }
+
+  .section__title {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+}

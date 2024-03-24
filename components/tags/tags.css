@@ -1,0 +1,36 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tags__link {
+  padding: 12px 26px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  background-color: #1F1A17;
+  border-radius: 80px;
+}
+
+.tags__link--More {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .buttonLink.tags__link {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .tags {
+    gap: 8px;
+  }
+
+  .tags__link.tags__link--More {
+    display: block;
+    background: transparent;
+    color: #1F1A17;
+    border: 1px solid #1F1A17;
+  }
+}

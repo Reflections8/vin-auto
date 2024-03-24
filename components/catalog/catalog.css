@@ -1,0 +1,33 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 966px;
+  margin-bottom: 80px;
+}
+
+.catalog__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.catalog__header-amount {
+  font-size: 14px;
+}
+
+.catalog__header-amount-dropdown {
+  max-width: 240px;
+  width: 100%;
+}
+
+.catalog__grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.catalog__showMore {
+  width: 100%;
+}

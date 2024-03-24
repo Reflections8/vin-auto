@@ -1,0 +1,183 @@
+@import "components/clearForm/clearForm.css";
+@import "components/clearInfo/clearInfo.css";
+
+.modalWrapper {
+  opacity: 1;
+  transition: all .2s ease-in-out;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  background-color: rgba(31, 26, 23, 0.4);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 100px;
+  overflow-y: scroll;
+}
+
+.modalWrapper {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.modalWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapperHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modalWrapper__modal {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 48px;
+  position: relative;
+  max-width: 764px;
+  width: 100%;
+  height: fit-content;
+}
+
+.hidden {
+  display: none;
+  pointer-events: none;
+}
+
+.modalWrapper__modal-closeIcon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+
+/* HEADER */
+.modalHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modalHeader__title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.modalHeader__text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #707D89;
+}
+
+
+/* CHECK LIST */
+.checkList {
+  background: #F3F3F5;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.checkList__title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.checkList__title-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+  row-gap: 16px;
+}
+
+.checkList__title-list-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkList__title-list-item-icon {
+  max-width: 24px;
+}
+
+.checkList__title-list-item-text {
+  font-size: 14px;
+}
+
+
+/* FORM */
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modalForm__title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.modalForm__content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modalForm__content input {
+  font-size: 14px;
+  height: 52px;
+}
+
+.modalForm__content textarea {
+  font-size: 14px;
+  resize: vertical;
+  min-height: 104px;
+}
+
+.modalForm__content-submitBtn {
+  width: fit-content;
+  max-width: 155px;
+  margin-top: 12px;
+}
+
+/* BUTTONS */
+.modalButtons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+
+/* FOOTER */
+.modalFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modalFooter__text {
+  font-size: 16px;
+  color: #707D89;
+}
+
+.modalFooter__link {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1F1A17;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+
+.modalFooter__link:hover {
+  color: #0093DD;
+}
+
+.modalFooter__link:active {
+  color: #0079B6;
+}
