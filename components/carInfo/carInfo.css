@@ -62,3 +62,68 @@
   font-size: 32px;
   font-weight: 700;
 }
+
+.carInfo__block--Name--Mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .carInfo {
+    width: 100%;
+    gap: 24px;
+  }
+
+  .carInfo__h1 {
+    font-size: 30px;
+  }
+
+  .carInfo__year {
+    font-size: 22px;
+  }
+
+  .carInfo__block--Name--Mobile {
+    display: flex;
+    gap: 8px;
+    margin-top: 160px;
+  }
+
+  .carInfo__block--Name--Desktop {
+    display: none;
+  }
+
+  .carInfo__title {
+    font-size: 18px;
+  }
+
+  .carInfo__list-row-key {
+    font-size: 14px;
+  }
+
+  .carInfo__list-row-value {
+    font-size: 14px;
+  }
+
+  .carInfo__price {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .carInfo__block--Name--Mobile {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .carInfo {
+    padding: 20px;
+  }
+
+  .carInfo__h1 {
+    font-size: 24px;
+  }
+
+  .carInfo__year {
+    font-size: 20px;
+  }
+}

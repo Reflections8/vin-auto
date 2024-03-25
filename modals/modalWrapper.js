@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalButtons = document.querySelectorAll('[data-modal-button]')
   const modals = document.querySelectorAll('[data-modal]')
 
-
   function hideAllModals() {
     modals.forEach(modal => {
       modal.classList.add('hidden')

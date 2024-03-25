@@ -4,7 +4,7 @@
   gap: 24px;
 }
 
-/* */
+/* CAR */
 
 .page--Car {
   display: flex;
@@ -20,4 +20,14 @@
 .carInfo aside {
   max-width: 526px;
   width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .page--Car {
+    flex-direction: column;
+  }
+
+  .page--Car main {
+    max-width: unset;
+  }
 }

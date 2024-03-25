@@ -8,10 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = dropdown.querySelector(".dropdown__menu");
     const options = dropdown.querySelectorAll(".dropdown__menu li");
     const selected = dropdown.querySelector(".dropdown__select-value-text");
+
     select.addEventListener("click", () => {
+      // Закрыть все открытые дропдауны перед открытием текущего
+      dropdowns.forEach((otherDropdown) => {
+        if (otherDropdown !== dropdown) {
+          const otherMenu = otherDropdown.querySelector(".dropdown__menu");
+          otherMenu.classList.remove("menu-open");
+        }
+      });
+
       caret.classList.toggle("caret-rotate");
       menu.classList.toggle("menu-open");
-      select.classList.add('dropdown__select--Opened')
+      select.classList.add('dropdown__select--Opened');
     });
 
     options.forEach((option) => {
@@ -27,5 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* close dropdown if clicked outside */
+  document.addEventListener('click', e => {
+    if (!e.target.closest('[data-dropdown]')) {
+      dropdowns.forEach(dropdown => {
+        const menu = dropdown.querySelector(".dropdown__menu");
+        menu.classList.remove('menu-open')
+      })
+    }
+  })
 
 })

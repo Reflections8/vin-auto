@@ -17,6 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
     dots: false,
     asNavFor: '.carSliderWrapper__main',
     focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+         slidesToShow: 4.25,
+        }
+      },
+    ]
   });
 
 })

@@ -44,8 +44,8 @@
 }
 
 .hidden {
-  display: none;
-  pointer-events: none;
+  display: none !important;
+  pointer-events: none !important;
 }
 
 .modalWrapper__modal-closeIcon {
@@ -181,4 +181,81 @@
 
 .modalFooter__link:active {
   color: #0079B6;
+}
+
+@media screen and (max-width: 1200px) {
+  .modalWrapper__modal {
+    padding: 24px;
+  }
+
+  .modalHeader__title {
+    font-size: 22px;
+  }
+
+  .modalHeader__text {
+    font-size: 14px;
+  }
+
+  .checkList__title {
+    font-size: 18px;
+  }
+
+  .checkList__title-list-item-text {
+    font-size: 12px;
+  }
+
+  .modalForm__title {
+    font-size: 18px;
+  }
+
+  .modalForm__content input {
+    font-size: 12px;
+  }
+  .modalForm__content textarea {
+    font-size: 12px;
+  }
+
+  .modalFooter__text {
+    font-size: 14px;
+  }
+
+  .modalFooter__link {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .modalHeader {
+    padding-right: 20px;
+  }
+
+  .modalWrapper__modal {
+    position: absolute;
+    top: 0;
+    min-height: 100%;
+    padding: 24px 16px;
+  }
+
+  .modalHeader__title {
+    font-size: 20px;
+  }
+
+  .modalForm__content-submitBtn {
+    max-width: unset;
+    width: 100%;
+  }
+
+  .checkList__title-list {
+    grid-template-columns: 1fr;
+  }
+
+  .modalButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .modalButtons .buttonLink {
+    width: 100%;
+    text-align: center;
+  }
 }

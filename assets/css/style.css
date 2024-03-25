@@ -154,6 +154,14 @@ button {
   cursor: pointer;
 }
 
+.slick-slider {
+  -webkit-user-select: text !important;
+  -khtml-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
 @media screen and (max-width: 1200px) {
   .container {
     padding: 0 30px;
