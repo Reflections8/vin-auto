@@ -1,5 +1,6 @@
 @import "components/clearForm/clearForm.css";
 @import "components/clearInfo/clearInfo.css";
+@import "components/filters/filters.css";
 
 .modalWrapper {
   opacity: 1;

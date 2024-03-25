@@ -60,3 +60,37 @@
   column-gap: 12px;
   row-gap: 16px;
 }
+
+@media screen and (max-width: 1200px) {
+  .filter {
+    display: none;
+  }
+  .filter__search-title {
+    font-size: 12px;
+  }
+  .filter__main-title {
+    font-size: 12px;
+  }
+  .filter__main-dropdown .dropdown__select-value-initialText {
+    font-size: 12px;
+  }
+
+  .filter__main-dropdown .dropdown__select-value {
+    font-size: 14px;
+  }
+  .dropdown .dropdown__menu {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .filter__search-title {
+    font-size: 12px;
+  }
+  .filter__main-title {
+    font-size: 12px;
+  }
+  .filter__main-dropdown .dropdown__select-value-initialText {
+    font-size: 12px;
+  }
+}

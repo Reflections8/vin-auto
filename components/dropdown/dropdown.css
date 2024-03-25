@@ -95,3 +95,13 @@
   background-color: #F3F3F5;
 }
 
+@media screen and (max-width: 1200px) {
+  .dropdown .dropdown__menu {
+    font-size: 14px;
+  }
+
+  .dropdown__select-value {
+    font-size: 12px;
+  }
+}
+

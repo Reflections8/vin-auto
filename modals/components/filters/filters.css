@@ -1,0 +1,26 @@
+.modalFilters.modalWrapper__modal {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modalFilters .modalHeader__title {
+  font-size: 22px;
+}
+
+@media screen and (max-width: 576px) {
+  .modalFilters .modalHeader__title {
+    font-size: 20px;
+  }
+
+  .modalFilters.modalWrapper__modal {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    min-height: 100%;
+    left: 0;
+    top: 0;
+    padding: 16px;
+  }
+}

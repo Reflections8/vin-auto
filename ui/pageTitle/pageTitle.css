@@ -6,3 +6,13 @@
   font-size: 44px;
   font-weight: 700;
 }
+
+@media screen and (max-width: 1200px) {
+  .pageTitleSection {
+    margin-bottom: 24px;
+  }
+
+  .pageTitle {
+    font-size: 30px;
+  }
+}

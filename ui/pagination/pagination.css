@@ -34,3 +34,22 @@
   background-color: #0093DD !important;
   border-color: #0093DD !important;
 }
+
+.catalog__pagination-btn--Prev {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .catalog__pagination {
+    gap: 6px;
+  }
+
+  .catalog__pagination-btn--Prev {
+    display: flex;
+    transform: rotate(180deg);
+  }
+
+  .buttonLink.catalog__pagination-btn {
+    max-width: 36px;
+  }
+}

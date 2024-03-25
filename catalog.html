@@ -311,6 +311,15 @@
 						<main class="main catalog">
 
 								<div class="catalog__header">
+
+										<button class="buttonLink buttonLink--transparent buttonLink--square buttonLink--icon catalog__header-filterBtn"
+														data-modal-button="filters">
+												<img src="components/filter/img/filters.svg"
+														 alt="filters"
+														 class="">
+												Фильтр
+										</button>
+
 										<div class="catalog__header-amount">
 												Найдено <span>652</span> автомобиля
 										</div>
@@ -338,6 +347,10 @@
 														<li>VIN</li>
 												</ul>
 										</div>
+								</div>
+
+								<div class="catalog__header-amount--Mobile">
+										Найдено <span>652</span> автомобиля
 								</div>
 
 								<div class="catalog__grid">
@@ -1521,6 +1534,12 @@
 								<!-- ui/pagination -->
 								<div class="catalog__pagination">
 
+										<button class="buttonLink buttonLink--square buttonLink--transparent catalog__pagination-btn catalog__pagination-btn--Prev">
+												<img src="ui/pagination/img/chevron-right.svg"
+														 alt="arrow-right"
+														 class="catalog__pagination-btn-icon">
+										</button>
+
 										<button class="buttonLink buttonLink--square buttonLink--transparent catalog__pagination-btn catalog__pagination-btn--Current">
 												1
 										</button>
@@ -1728,7 +1747,7 @@
 		</div>
 
 		<!-- clearInfo -->
-		<div data-modal="clear-info" class="modalWrapper__modal clearInfo">
+		<div data-modal="clear-info" class="modalWrapper__modal clearInfo hidden">
 
 				<!-- close icon -->
 				<img src="modals/img/x.svg"
@@ -1820,6 +1839,189 @@
 						</a>
 				</div>
 		</div>
+
+		<!-- filters -->
+		<div data-modal="filters" class="modalWrapper__modal modalFilters hidden">
+
+				<!-- close icon -->
+				<img src="modals/img/x.svg"
+						 alt="x"
+						 class="modalWrapper__modal-closeIcon">
+
+				<!-- header -->
+				<div class="modalHeader">
+						<div class="modalHeader__title">
+								Фильтры
+						</div>
+				</div>
+
+						<!-- search -->
+						<div class="filter__search">
+								<div class="filter__search-title">
+										Поиск по VIN
+								</div>
+
+								<!-- ui/textInput -->
+								<input type="text"
+											 class="textInput filter__search-input"
+											 placeholder="VIN">
+
+								<button class="buttonLink buttonLink--square buttonLink--icon buttonLink--blue">
+										<img src="assets/images/search-md.svg" alt="search">
+										Поиск
+								</button>
+						</div>
+
+						<!-- main filters -->
+						<div class="filter__main">
+								<div class="filter__main-title">
+										Фильтр
+								</div>
+
+								<!-- ui/dropdown -->
+								<div data-dropdown="manufacture" class='dropdown filter__main-dropdown'>
+
+										<div class='dropdown__select'>
+												<div class='dropdown__select-value'>
+																<span class="dropdown__select-value-text dropdown__select-value-initialText">
+																		Марка
+																</span>
+												</div>
+												<svg class="dropdown__select-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 10L8 6L4 10" stroke="#1F1A17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+
+										</div>
+										<ul class='dropdown__menu'>
+												<li>AUDI</li>
+												<li>CHEVROLET</li>
+												<li>BMW</li>
+												<li>Mercedes</li>
+										</ul>
+								</div>
+
+								<!-- ui/dropdown -->
+								<div data-dropdown="model" class='dropdown filter__main-dropdown'>
+
+										<div class='dropdown__select'>
+												<div class='dropdown__select-value'>
+																<span class="dropdown__select-value-text dropdown__select-value-initialText">
+																		Модель
+																</span>
+												</div>
+												<svg class="dropdown__select-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 10L8 6L4 10" stroke="#1F1A17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+
+										</div>
+										<ul class='dropdown__menu'>
+												<li>Какая-то модель 1</li>
+												<li>Какая-то модель 2</li>
+												<li>Какая-то модель 3</li>
+												<li>Какая-то модель 4</li>
+										</ul>
+								</div>
+
+								<div class="filter__grid">
+
+										<!-- ui/dropdown -->
+										<div data-dropdown="yearFrom" class='dropdown filter__main-dropdown'>
+
+												<div class='dropdown__select'>
+														<div class='dropdown__select-value'>
+																<span class="dropdown__select-value-text dropdown__select-value-initialText">
+																		Год от
+																</span>
+														</div>
+														<svg class="dropdown__select-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M12 10L8 6L4 10" stroke="#1F1A17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+														</svg>
+
+												</div>
+												<ul class='dropdown__menu'>
+														<li>1980</li>
+														<li>1981</li>
+														<li>1982</li>
+														<li>1983</li>
+												</ul>
+										</div>
+
+										<!-- ui/dropdown -->
+										<div data-dropdown="yearTo" class='dropdown filter__main-dropdown'>
+
+												<div class='dropdown__select'>
+														<div class='dropdown__select-value'>
+																<span class="dropdown__select-value-text dropdown__select-value-initialText">
+																		Год до
+																</span>
+														</div>
+														<svg class="dropdown__select-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M12 10L8 6L4 10" stroke="#1F1A17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+														</svg>
+
+												</div>
+												<ul class='dropdown__menu'>
+														<li>2000</li>
+														<li>2001</li>
+														<li>2002</li>
+														<li>2003</li>
+												</ul>
+										</div>
+
+										<!-- ui/dropdown -->
+										<div data-dropdown="priceFrom" class='dropdown filter__main-dropdown'>
+
+												<div class='dropdown__select'>
+														<div class='dropdown__select-value'>
+																<span class="dropdown__select-value-text dropdown__select-value-initialText">
+																		Цена от
+																</span>
+														</div>
+														<svg class="dropdown__select-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M12 10L8 6L4 10" stroke="#1F1A17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+														</svg>
+
+												</div>
+												<ul class='dropdown__menu'>
+														<li>1 млн.</li>
+														<li>2 млн.</li>
+														<li>3 млн.</li>
+														<li>4 млн.</li>
+												</ul>
+										</div>
+
+										<!-- ui/dropdown -->
+										<div data-dropdown="priceTo" class='dropdown filter__main-dropdown'>
+												<div class='dropdown__select'>
+														<div class='dropdown__select-value'>
+																<span class="dropdown__select-value-text dropdown__select-value-initialText">
+																		Цена до
+																</span>
+														</div>
+														<svg class="dropdown__select-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M12 10L8 6L4 10" stroke="#1F1A17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+														</svg>
+
+												</div>
+												<ul class='dropdown__menu'>
+														<li>1 млн.</li>
+														<li>2 млн.</li>
+														<li>3 млн.</li>
+														<li>4 млн.</li>
+												</ul>
+										</div>
+								</div>
+						</div>
+
+						<button class="buttonLink buttonLink--square buttonLink--blue">
+								Применить фильтр
+						</button>
+
+						<button class="buttonLink buttonLink--square buttonLink--icon">
+								<img src="assets/images/x.svg" alt="x">
+								Сбросить фильтр
+						</button>
+		</div>
 </div>
 
 <!-- jQuery CDN -->
@@ -1844,8 +2046,9 @@
 <script src="components/footer/footer.js"></script>
 <script src="components/basicSlider/basicSlider.js"></script>
 <script src="modals/modalWrapper.js"></script>
-<!-- Modals -->
 
+<!-- Modals -->
+<script src="modals/modalWrapper.js"></script>
 
 </body>
 </html>
