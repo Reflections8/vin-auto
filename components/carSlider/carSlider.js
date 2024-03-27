@@ -1,11 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const prevArrow = document.querySelector('.carSliderWrapper__main-arrow--prev')
+  const nextArrow = document.querySelector('.carSliderWrapper__main-arrow--next')
+
   $('.carSliderWrapper__main').slick({
     infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
     dots: true,
-    arrows: false,
+    arrows: true,
+    prevArrow: prevArrow,
+    nextArrow: nextArrow,
     asNavFor: '.carSliderWrapper__gallery',
   });
 

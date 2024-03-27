@@ -4,6 +4,25 @@
   gap: 24px;
 }
 
+.carSliderWrapper__main--Wrapper {
+  position: relative;
+}
+
+.carSliderWrapper__main-arrow--prev {
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  background-color: transparent !important;
+}
+.carSliderWrapper__main-arrow--next {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  height: 100%;
+  background-color: transparent !important;
+}
+
 .carSliderWrapper__main {
   overflow: hidden;
 }
